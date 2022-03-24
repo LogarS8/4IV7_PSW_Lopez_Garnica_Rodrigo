@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/validacion.js"></script>
+    <title>Examen Practico</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <nav> 
+                <h1>LGRmotors Company</h1>
+            </nav>
+        </header>
+        <section>
+            <form method="post" name="formulario" action="" id="formulario1">
+                <label>Valor del automovil</label>
+                <br>
+                <input type="number" name="valorauto" id="valorauto">
+                <br>
+                <label>Cuota inicial (enganche)</label>
+                <br>
+                <input type="number" name="cuotainicial" id="cuotainicial">
+                <br>
+                <label>Numero de meses a deducir</label>
+                <br>
+                <input type="radio" name="meses" id="3" value="3">
+                <label for="3">3</label>
+                <input type="radio" name="meses" id="6" value="6">
+                <label for="6">6</label>
+                <input type="radio" name="meses" id="9" value="9">
+                <label for="9">9</label>
+                <input type="radio" name="meses" id="12" value="12">
+                <label for="12">12</label>
+                <input type="radio" name="meses" id="18" value="18">
+                <label for="18">18</label>
+
+                <br>
+                <label>Interes de la empresa</label>
+                <br>
+                <input type="number" name="interes" id="interes" value="3.94" readonly>
+                <br>
+                <label>Cuota a efectuar mensualmente por el automovil</label>
+                <br>
+                <input type="number" name="mensualidad" id="mensualidad">
+                <br>
+                <input type="submit" name="enviar" value="Enviar datos">
+                <br>
+                <input type="reset" name="borrar" value="Borrar datos">
+                <br>
+            </form>
+        </section>
+        <footer>
+            <h3>Elaborado por: Lopez Garnica Rodrigo Grupo: 4IV7 Fecha de entrega: 03/03/2022</h3>
+            <br>
+            <a href="../index.html">Regresar a Principal</a>
+        </footer>
+    </div>
+</body>
+<script src="js/validacion.js"></script>
+</html>
