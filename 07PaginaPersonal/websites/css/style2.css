@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+@keyFrames typing {
+
+    from { width: 0}
+    }
+    
+@keyFrames blink {
+     50% { border-color: transparent}
+    }
+
+html, body{
+    background-image: url(../images/fondo2.jpg);
+    background-size: cover;
+
+}
+
+.main{
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 2rem;
+    background-color: red;
+}
+
+
+nav, section, footer, aside, article{
+    border: 2px solid black;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+article, aside{
+    border-radius: 40px;
+    width: 40%;
+    display: inline-block;
+    height: 300px;
+    background-color: darkkhaki;
+}
+
+nav, footer, section {
+    background-color: darkgray;
+}
+
+nav h1{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 16ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+footer h3{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 77ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+article h3{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 11ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+aside{
+    background-image: url(../images/video.jpg);
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+}
