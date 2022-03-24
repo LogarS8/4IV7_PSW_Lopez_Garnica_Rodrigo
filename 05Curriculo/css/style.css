@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+body{
+    background-image: url(../images/fondo.jpg);
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.foto{
+    width: 120px;
+    height: 120px;
+    background-image: url(../images/foto.jpg);
+    border-radius: 40px;
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+.tittle2{
+    text-align: center;
+    color: white;
+}
+
+.contact{
+    width: 500px;
+    background-image: url(../images/fondo3.jpg);
+}
+
+.contact h1{
+    text-align: center;
+}
+
+.info h2{
+    text-align: left;
+}
+
+.info h3{
+    text-align: center;
+}
+
+.info h4{
+    text-align: right;
+}
+
+.information{
+    background-image: url(../images/fondo2.jpg);
+    height: 800px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.about{
+    margin-top: 15px;
+    background-color: grey;
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.about h1{
+    text-align: center;
+}
+
+.object{
+    margin-top: 15px;
+    background-color: grey;
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.object h1{
+    text-align: center;
+}
+
+.escolarid{
+    margin-top: 15px;
+    background-color: grey;
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.escolarid h1{
+    text-align: center;
+}
+
+.courses{
+    margin-top: 15px;
+    background-color: grey;
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.courses h1{
+    text-align: center;
+}
+
+.skills{
+    margin-top: 15px;
+    background-color: grey;
+    width: 600px;
+    height: 400px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+}
+
+.skills h1{
+    text-align: center;
+}
+
