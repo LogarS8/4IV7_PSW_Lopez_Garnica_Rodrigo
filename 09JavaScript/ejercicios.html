@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Java Script</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav><h1>Ejercicios con JavaScript.</h1></nav>
+    </header>
+    <section class="contenedor">
+        <form name="formulario" method="post" action="" onsubmit="interes(event)">
+
+        <label><h3>Suponga que un individuo desea invertir su capital en un banco y desea saber cuanto dinero ganara despues de un mes si el banco paga a razon de 2% mensual:</h3></label>
+        <br>
+        <table>
+            <tr>
+                <td>Introduce la cantidad que deseas invertir</td>
+                <td><input type="text" name="cantidad" oninput="vNf(this)" required/></td>
+            </tr>
+            <tr>
+                
+                <td>Introduce el numero de meses que deseas invertir(Max.48)</td>
+                <td><input type="text" name="meses" oninput="vN0_48(this)" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Calcular Interes" name="enviar" ></td>
+
+            </tr>
+            <tr>
+                <td>Su saldo con el interes al 3.7% es:</td>
+                <td><input type="text" name="sueldoI" id="cantidadI" readonly="readonly"></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarf()"></td>
+            </tr>
+        </table>
+        </form>
+    </section>
+        <br><br>
+    <section class="contenedor">
+        <form name="formulario1" method="post" action="" onsubmit="sueldoT(event)">
+
+        <label><h3>Un vendedor recibe un sueldo base mas un 10% extra por comision de sus ventas, el vendedor desea saber cuanto dinero obtendra por conceptos de comisiones por las tres ventas que realiza en el mes y el total que recibira en el mes tomando en cuenta su sueldo base y comisiones. </h3></label>
+        <br>
+        <table>
+            <tr>
+                <td>Introduce tu sueldo base como trabajador: </td>
+                <td><input type="text" name="sueldoB" oninput="vNf(this)" required></td>
+            </tr>
+            <tr>
+                <td>El total de tus comisiones es: </td>
+                <td><input type="text" name="totalcomisiones" id="comisiones" readonly="readonly"></td>
+            </tr>            
+            <tr>
+                <td>Sueldo mas comisiones:</td>
+                <td><input type="text" name="sueldoC" id="sueldocomision" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Calcular Sueldo Total Más Comisiones" name="send2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarm()"></td>
+            </tr>
+        </table>
+        </form>
+    </section>
+        <br><br>
+    <section class="contenedor">
+        <form name="formulario2" method="post" action="" onsubmit="descuento(event)">
+
+        <label><h3>Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuanto debera pagar finalmente por su compra.</h3> </label>
+        <br>
+        <table>
+            <tr>
+                <td>Ingresa el monto total por tu compra:</td>
+                <td><input type="text" name="compra" oninput="vNf(this)" required></td>
+            </tr>
+            <tr>
+                <td>Total de la compra menos descuento:</td>
+                <td><input type="text" name="totalC" id="totalcompra" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Calcular Descuento al 15%" name="enviarf"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Borrar Datos" id="borrar" onclick="borrart()"></td>
+            </tr>
+        </table>
+        </form>
+    </section>
+        <br><br>
+    <section class="contenedor">
+        <form name="formulario3" method="post" action="" onsubmit="calificacion(event)">
+
+        <label><h3>Un alumno desea saber cual sera su calificacion final en la materia de algoritmos, dicha calificacion se compone de los siguientes procentajes.
+            *55% del promedio de sus tres calificaciones parciales.
+            *30% de la calificacion del examen final.
+            *15% de la calificacion de un trabajo final.</h3>
+        </label> 
+        <br>
+        <table>
+           <tr>
+               <td>Ingresa tu calificacion de primer parcial:</td>
+               <td><input type="text" name="p1" oninput="vCal(this)" required></td>
+           </tr>
+           <tr>
+               <td>Ingresa tu calificacion del segundo parcial:</td>
+               <td><input type="text" name="p2" oninput="vCal(this)" required></td>
+           </tr>
+           <tr>
+               <td>Ingresa tu calificacion del tercer parcial:</td>
+               <td><input type="text" name="p3" oninput="vCal(this)" required></td>
+           </tr>
+           <tr>
+               <td>Ingresa la calificacion de tu examen final:</td>
+               <td><input type="text" name="final" oninput="vCal(this)" required></td>
+           </tr>
+           <tr>
+               <td>Ingresa la calificacion de tu trabajo final:</td>
+               <td><input type="text" name="trabajof" oninput="vCal(this)" required></td>
+           </tr>
+           <tr>
+               <td>Tu calificacion final es:</td>
+               <td><input type="text" name="calfin" id="calfinal" readonly="readonly"></td>
+           </tr>
+           <tr>
+                <td>Promedio de tus parciales:</td>
+                <td><input type="text" name="prom" id="promedio" readonly="readonly"></td>
+            </tr>
+           <tr>
+               <td></td>
+               <td><input type="submit" value="Calcular Calificacion final" id="enviarg"></td>
+           </tr>
+        </table>
+        </form>
+    </section>
+        <br><br>
+    <section class="contenedor">
+        <form name="formulario4" method="post" action="" onsubmit="porcentajes(event)">
+
+        <label><h3>Un maestro desea saber que procentaje de hombres y que de mujeres hay en un grupo de estudiantes.</h3> </label>
+        <br>
+        <table>
+            <tr>
+                <td>Introduce la cantidad de mujeres que hay en el grupo:</td>
+                <td><input type="text" name="mujeres" oninput="vNi(this)" required></td>
+            </tr>
+            <tr>
+                <td>Introduce la cantidad de hombres que hay en el grupo:</td>
+                <td><input type="text" name="hombres" oninput="vNi(this)" required></td>
+            </tr>
+            <tr>
+                <td>El procentaje de mujeres en el grupo es de:</td>
+                <td><input type="text" name="muj" id="totalmj" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td>El porcentaje de hombres en el grupo es de:</td>
+                <td><input type="text" name="hom" id="totalhom" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Calcular porcentajes" id="sendd"></td>
+            </tr>
+        </table>
+        </form>
+    </section>
+        <br><br>
+    <section class="contenedor">
+        <form name="formulario5" method="post" action="" onsubmit="calculoEdad(event)">
+
+        <label><h3>Realizar un algoritmo que calcule la edad de una persona. </h3></label>
+        <br>
+        <table>
+            <tr>
+                <td>Ingresa tu año de nacimiento:</td>
+                <td><input type="text" name="fechaN" id="feNa" oninput="vAño(this)" required></td>
+            </tr>
+            <tr>
+                <td>Ingresa el año actual:</td>
+                <td><input type="text" name="fechaA" id="feAc" oninput="vAño(this)" required></td>
+            </tr>
+            <tr>
+                <td>Tu edad es:</td>
+                <td><input type="text" name="edadN" id="ed" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Calcular La Edad" ></td>
+            </tr>
+        </table>
+        </form>
+    </section>
+    <footer>
+        <h3>Elaborado por : Lopez Garnica Rodrigo - 18/03/2022</h3>
+    </footer>
+    <script src="js/interes.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width: 1000px;
+    background-color: cornflowerblue;
+    padding: 30px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 20px;
+    font-family: 'Arial';
+}
+
+input:valid {
+	background-color: white;
+}
+input:invalid {
+	background-color: lightpink;
+}
