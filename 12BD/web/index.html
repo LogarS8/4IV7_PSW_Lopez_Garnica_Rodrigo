@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Forms</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body class="bg-dark">
+        <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" >
+                <h1>Consulta de Alumnos de Batiz</h1>
+                <br>
+                <a class="btn btn-lg btn-outline-light" href="ConsultarAlumnos" >Consultar Lista</a>
+            </div>
+            <div class="registro bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" >
+                <br>
+                <form name="formulario" method="post" action="RegistrarAlumnos" >
+                    <label>Nombre</label>
+                    <br>
+                    <input type="text" name="nombre" id="nombre" class="btn btn-lg btn-outline-light"  >
+                    <br>
+                    <label>Apellido Paterno</label>
+                    <br>
+                    <input type="text" name="appat" id="appat" class="btn btn-lg btn-outline-light"  >
+                    <br>
+                    <label>Apellido Materno</label>
+                    <br>
+                    <input type="text" name="apmat" id="apmat" class="btn btn-lg btn-outline-light"  >
+                    <br>
+                    <label>Boleta</label>
+                    <br>
+                    <input type="text" name="boleta" id="boleta" required class="btn btn-lg btn-outline-light" >
+                    <br>
+                    <label>Telefono</label>
+                    <br>
+                    <input type="text" name="telefono" id="telefono" class="btn btn-lg btn-outline-light"  >
+                    <br><br><br>
+                    <div><input type="submit" value="Registrar Nuevo Alumno" class="btn btn-lg btn-outline-light"  >
+                    <br>
+                    <input type="reset" value="Borrar Datos" class="btn btn-lg btn-outline-light"  ></div>
+                </form>
+            </div>
+            <div class="eliminar bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" >
+                <form method="get" action="EliminarAlumno" name="elimina" >
+                    <br>
+                    <label>Ingrese la Boleta para dar de baja a un alumno</label>
+                    <br>
+                    <input type="text" name="boletaelimina" class="btn btn-lg btn-outline-light"  >
+                    <br>
+                    <input type="submit" value="Dar de Baja" class="btn btn-lg btn-outline-light"  >
+                </form>
+
+            </div>
+            <p class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">¿Qué desea editar?</p>
+            <div class="selector bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <select class="btn btn-lg btn-outline-light"  name="seleccion" onchange="seleccionar()" id="seleccion">
+                    <option value="todo" name="todo" selected>Editar todo</option>
+                    <option value="sNom" name="sNom">Solo nombre</option>
+                    <option value="sAP" name="sAP">Solo Apellido Paterno</option>
+                    <option value="sAM" name="sAM">Solo Apellido Materno</option>
+                    <option value="sTel" name="sTel">Solo Telefono</option>
+                </select>
+            </div>
+            <div id="AcTodo" class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" >
+                <br>
+                <p>Para editar, introduzca la boleta anterior del alumno y los nuevos datos</p>
+                <form name="formulario" method="get" action="AcTodo" >
+                    <label>Boleta</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="boletaeditar" id="boleta" required >
+                    <br>
+                    <label>Nombre</label>
+                    <br>
+                    <input  class="btn btn-lg btn-outline-light" type="text" name="nombre" id="nombre"  >
+                    <br>
+                    <label>Apellido Paterno</label>
+                    <br>
+                    <input  class="btn btn-lg btn-outline-light" type="text" name="appat" id="appat"  >
+                    <br>
+                    <label>Apellido Materno</label>
+                    <br>
+                    <input  class="btn btn-lg btn-outline-light" type="text" name="apmat" id="apmat"  >
+                    <br>
+                    <label>Telefono</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="telefono" id="telefono"  >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="submit" value="Editar Alumno" >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="reset" value="Borrar Datos" >
+                </form>
+            </div>
+
+            <div id="AcsNom" class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <br>
+                <p>Para editar, introduzca la boleta anterior del alumno y los nuevos datos</p>
+                <form name="formulario" method="get" action="AcsNom" >
+                    <label>Boleta</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="boletaeditar" id="boleta" required >
+                    <br>
+                    <label>Nombre</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="nombre" id="nombre"  >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="submit" value="Editar Alumno" >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="reset" value="Borrar Datos" >
+                </form>
+            </div>
+
+            <div id="AcsAP" class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <br>
+                <p>Para editar, introduzca la boleta anterior del alumno y los nuevos datos</p>
+                <form name="formulario" method="get" action="AcsAP" >
+                    <label>Boleta</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="boletaeditar" id="boleta" required >
+                    <br>
+                    <label>Apellido Paterno</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="appat" id="appat"  >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="submit" value="Editar Alumno" >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="reset" value="Borrar Datos" >
+                </form>
+            </div>
+
+            <div id="AcsAM" class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <br>
+                <p>Para editar, introduzca la boleta anterior del alumno y los nuevos datos</p>
+                <form name="formulario" method="get" action="AcsAM" >
+                    <label>Boleta</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="boletaeditar" id="boleta" required >
+                    <br>
+                    <label>Apellido Materno</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="apmat" id="apmat"  >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="submit" value="Editar Alumno" >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="reset" value="Borrar Datos" >
+                </form>
+            </div>
+
+            <div id="AcsTel" class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <br>
+                <p>Para editar, introduzca la boleta anterior del alumno y los nuevos datos</p>
+                <form name="formulario" method="get" action="AcsTel" >
+                    <label>Boleta</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="boletaeditar" id="boleta" required >
+                    <br>
+                    <label>Telefono</label>
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="text" name="telefono" id="telefono"  >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="submit" value="Editar Alumno" >
+                    <br>
+                    <input class="btn btn-lg btn-outline-light"  type="reset" value="Borrar Datos" >
+                </form>
+            </div>
+        </div>
+        <br><br>
+    </body>
+    <script src="script.js" type="text/javascript"></script>
+</html>

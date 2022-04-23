@@ -64,7 +64,7 @@ function validarn(e){
     return patron.test(codigo);
 }
 
-function interes(){
+function interes(e){
 
     var valor = document.formulario.cantidad.value;
     var mes = document.formulario.meses.value;
@@ -78,6 +78,7 @@ function interes(){
     var total2 = total * resu;
 
     document.formulario.sueldoI.value = "$" + total2;
+    e.preventDefault();
 }
 
 function borrarf(){

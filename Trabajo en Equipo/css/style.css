@@ -1,0 +1,61 @@
+*{
+    margin: 5px;
+    padding: 0;
+}
+
+input:valid {
+	background-color: white;
+}
+
+input:invalid {
+	background-color: lightpink;
+}
+
+body{
+    background-image: url(../images/fondo1.jpg);
+    background-size: cover;
+}
+
+.titulo{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 33ch;
+    animation: typing 10s steps(33), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from{
+        width: 0
+    }
+}
+
+@keyframes blink{
+    100%{
+        border-color: transparent;
+    }
+}
+
+.integrantes{
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor{
+    background-color: rgb(191, 220, 245);
+}

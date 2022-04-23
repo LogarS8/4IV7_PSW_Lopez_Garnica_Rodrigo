@@ -1,0 +1,201 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo en equipo - Ejercicios JS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1><span>Trabajo en Equipo Problemas JS II</span></h1>
+        </div>
+        <div class="integrantes">
+        <ul>
+            <h3>Integrantes del Equipo:</h3><br>
+            <li>Riveron Martinez Joshua Israel</li>
+            <li>Lopez Garnica Rodrigo</li>   
+            <li>Lira Orozco Ruben Armando</li>
+            <li>Rioz Toledo Arath Yunketl</li>
+            <li>Hernandez Yave Alan</li>
+        </ul>
+        </div>
+    <section class="contenedor">
+        <form name="formulario1" method="post" action="" onsubmit="calculonum(event)">
+            <label><h3>Leer 2 numeros; si son iguales que los multiplique, si el primero es mayor que el segundo que los reste y si no que los sume.</h3></label>
+            <table>
+                <tr>
+                    <td>Ingresa el primer numero:</td>
+                    <td><input type="text" name="num1" id="numn" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el segundo numero:</td>
+                    <td><input type="text" name="num2" id="numm" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>El resultado de la operacion es:</td>
+                    <td><input type="text" name="salidanum" id="salidan" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Calcular Operacion" name="enviard" onclick="calculonum()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarp()"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <section>
+        <form name="formulario2" method="post" action="" onsubmit="mayor(event)">
+            <label><h3>Leer tres numeros diferentes e imprimir el numero mayor de los tres.</h3></label>
+            <table>
+                <tr>
+                    <td>Ingresa el num1:</td>
+                    <td><input type="text" name="num1" id="nums" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el num2:</td>
+                    <td><input type="text" name="num2" id="nume" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el num3:</td>
+                    <td><input type="text" name="num3" id="numo" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>El mayor numero de los tres es:</td>
+                    <td><input type="text" name="salidanumero" id="salid" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Calcular Numero Mayor" name="enviard" onclick="mayor()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarz()"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <section>
+        <form name="formulario3" method="post" action="" onsubmit="horasextra(event)">
+            <label><h3>Determinar la cantidad de dinero que recibira un trabajador por concepto de las horas extras 
+                trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran
+                horas extra y que estas se pagan al doble de una hora nominal cuando no exceden de 8; si las horas extras 
+                exceden de 8, se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto al triple.
+            </h3></label>
+            <table>
+                <tr>
+                    <td>Ingresa el numero de horas trabajadas:</td>
+                    <td><input type="text" name="horast" id="horastraba" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Ingresa la cantidad pagada por hora:</td>
+                    <td><input type="text" name="costhora" id="costo" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>El numero de horas extras es:</td>
+                    <td><input type="text" name="horasex" id="horasextra" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Calcular Horas Extra" onclick="total()"></td>
+                </tr>
+                <tr>
+                    <td>La cantidad recibida por concepto de horas extra es:</td>
+                    <td><input type="text" name="concepex" id="totalextra" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Calcular Sueldo Horas Extra" onclick="horasextra()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarl()"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <section>
+        <form name="formulario4" method="post" action="" onsubmit="utilidad(event)">
+        <label><h3>Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si este se le
+            asigna como porcentaje de su salario mensual que depende de su antiguedad en la empresa de acuerdo con
+            la siguiente tabla:
+            <table class="problema-table" style="width: 30%; ">
+                <thead>
+                    <tr>
+                        <th><em>Tiempo</em></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1- Menos de un año</td>
+                    </tr>
+                    <tr>
+                        <td>2- 1 año o mas y menos de 2 años</td>
+                    </tr>
+                    <tr>
+                        <td>3- 2 años o mas y menos de 5 años</td>
+                    </tr>
+                    <tr>
+                        <td>4- 5 años o mas y menos de 10 años</td>
+                    </tr>
+                    <tr>
+                        <td>5- 10 años o mas</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="problema-table" style="width: 30%; ">
+                <thead>
+                    <tr>
+                        <th><em>Utilidad</em></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1- 5% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>2- 7% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>3- 10% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>4- 15% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>5- 20% del salario  </td>
+                    </tr>
+                </tbody>
+            </table>
+        </h3></label>
+            <table>
+                <tr>
+                    <td>Ingresa tu sueldo mensual:</td>
+                    <td><input type="text" name="sueldom" id="sueldomensual" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Ingresa tu antiguedad en la empresa(se contara como año):</td>
+                    <td><input type="text" name="antigue" id="antiguedad" placeholder="Ej. 1 = año" oninput="vNf(this)" required></td>
+                </tr>
+                <tr>
+                    <td>La utilidad anual que recibiras es:</td>
+                    <td><input type="text" name="utilidadfin" id="utim" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Calcular Utilidad" onclick="utilidad()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarñ()"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <script src="js/operaciones.js"></script>
+</body>
+</html>

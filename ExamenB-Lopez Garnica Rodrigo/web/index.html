@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen B-LGR</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  
+  <body class="text-center">
+    
+    <main class="form-signin">
+        <form method="get" action="formulario.jsp">
+          <h1 class="h3 mb-3 fw-normal">Bienvenido</h1><br>
+
+        <div class="form-floating">
+            Turno:
+            <select name="turno">
+                <option value="M">Matutino</option>
+                <option value="V">Vespertino</option>
+            </select><br><br>
+        </div>
+        <div class="form-floating">
+          Grado:
+          <select name="grado">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+          </select><br><br>
+        </div>
+        <div>
+            Grupo: 
+            <select name="grupo">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-dark btn-outline-success" type="submit">Enviar datos</button>
+      </form>
+    </main>
+
+
+    
+  </body>
+</html>
